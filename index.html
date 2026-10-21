@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="生活助手">
+  <title>生活助手</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 侧边栏 -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo">
+        <span class="logo-icon">📋</span>
+        <span class="logo-text">生活助手</span>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <a href="#/home" class="nav-item active" data-page="home">
+          <span class="nav-icon">🏠</span><span class="nav-label">首页总览</span>
+        </a>
+        <a href="#/tasks" class="nav-item" data-page="tasks">
+          <span class="nav-icon">✅</span><span class="nav-label">今日计划</span>
+        </a>
+        <a href="#/workout" class="nav-item" data-page="workout">
+          <span class="nav-icon">💪</span><span class="nav-label">健身计划</span>
+        </a>
+        <a href="#/diet" class="nav-item" data-page="diet">
+          <span class="nav-icon">🍎</span><span class="nav-label">饮食计划</span>
+        </a>
+        <a href="#/expense" class="nav-item" data-page="expense">
+          <span class="nav-icon">💰</span><span class="nav-label">记账</span>
+        </a>
+        <a href="#/calendar" class="nav-item" data-page="calendar">
+          <span class="nav-icon">📅</span><span class="nav-label">日历</span>
+        </a>
+        <a href="#/settings" class="nav-item" data-page="settings">
+          <span class="nav-icon">⚙️</span><span class="nav-label">数据与设置</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <span class="status-dot"></span>
+        <span class="status-text">本地已保存</span>
+      </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-content" id="mainContent">
+      <!-- 页面内容由 router 动态渲染 -->
+    </main>
+  </div>
+
+  <!-- 模态框容器 -->
+  <div id="modalContainer"></div>
+
+  <!-- Toast 容器 -->
+  <div id="toastContainer"></div>
+
+  <!-- 脚本 -->
+  <script src="assets/chart.umd.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/pages/home.js"></script>
+  <script src="js/pages/tasks.js"></script>
+  <script src="js/pages/workout.js"></script>
+  <script src="js/pages/diet.js"></script>
+  <script src="js/pages/expense.js"></script>
+  <script src="js/pages/calendar.js"></script>
+  <script src="js/pages/settings.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
